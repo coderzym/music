@@ -563,7 +563,7 @@ main .main-right .mr ul {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .main-right .mr .sb li {
