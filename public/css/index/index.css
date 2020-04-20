@@ -1,0 +1,1010 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* 这里是底部css代码 */
+footer {
+    border-top: 1px solid #d3d3d3;
+    height: 172px;
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer .con-box {
+    height: 120px;
+}
+
+footer>.contain {
+    width: 982px;
+    height: 120px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+}
+
+footer>.contain .footer-left {
+    width: 520px;
+    height: 111px;
+    float: left;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #666;
+}
+
+footer>.contain .footer-left a:hover {
+    text-decoration: underline;
+}
+
+footer>.contain .footer-left p {
+    margin-bottom: 10px;
+}
+
+footer>.contain .footer-left p:first-child {
+    color: #999;
+}
+
+footer>.contain .footer-left span {
+    margin: 0 10px;
+}
+
+footer>.contain ul {
+    width: 330px;
+    height: 70px;
+    margin-top: 33px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>.contain ul li {
+    width: 60px;
+    height: 70px;
+}
+
+footer>.contain ul li a {
+    display: block;
+    width: 50px;
+    height: 45px;
+}
+
+footer>.contain ul li:nth-child(1) {
+    background: url(../../img/foot_enter_new.png) no-repeat;
+    background-position: -63px -101px;
+    width: 50px;
+    height: 45px;
+    background-size: 110px 450px;
+}
+
+footer>.contain ul li:nth-child(1) span {
+    background: url(../../img/foot_enter_tt.png) no-repeat;
+    display: inline-block;
+    background-position: -1px -91px;
+    width: 52px;
+    height: 14px;
+    background-size: 180px 100px;
+}
+
+footer>.contain ul li:nth-child(2) {
+    background: url(../../img/foot_enter_new.png) no-repeat;
+    background-position: 0 0;
+    width: 50px;
+    height: 45px;
+    background-size: 110px 450px;
+}
+
+footer>.contain ul li:nth-child(2) span {
+    background: url(../../img/foot_enter_tt.png) no-repeat;
+    display: inline-block;
+    background-position: 0 0;
+    width: 52px;
+    height: 14px;
+    background-size: 180px 100px;
+}
+
+footer>.contain ul li:nth-child(3) {
+    background: url(../../img/foot_enter_new.png) no-repeat;
+    background-position: -60px -50px;
+    width: 50px;
+    height: 45px;
+    background-size: 110px 450px;
+}
+
+footer>.contain ul li:nth-child(3) span {
+    background: url(../../img/foot_enter_tt.png) no-repeat;
+    display: inline-block;
+    background-position: 0 -54px;
+    width: 52px;
+    height: 14px;
+    background-size: 180px 100px;
+}
+
+footer>.contain ul li:nth-child(4) {
+    background: url(../../img/foot_enter_new.png) no-repeat;
+    background-position: 0 -101px;
+    width: 50px;
+    height: 45px;
+    background-size: 110px 450px;
+}
+
+footer>.contain ul li:nth-child(4) span {
+    background: url(../../img/foot_enter_tt.png) no-repeat;
+    display: inline-block;
+    background-position: -1px -72px;
+    width: 52px;
+    height: 14px;
+    background-size: 180px 100px;
+}
+
+/* 这里是头部内容样式 */
+header {
+    width: 100%;
+    min-width: 1100px;
+    height: 105px;
+    background-color: #242424;
+}
+
+/* 这里是头部上方nav */
+header .h-top {
+    width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+header .h-top .logo {
+    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f);
+    width: 176px;
+    height: 69px;
+    float: left;
+}
+
+.h-top>ul {
+    width: 508px;
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    float: left;
+    position: relative;
+}
+
+.h-top ul li {
+    height: inherit;
+    flex: 1;
+}
+
+.h-top ul li:hover {
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.h-top>ul li:nth-child(1) {
+    position: relative;
+    color: #fff;
+    background-color: black;
+}
+
+.h-top>ul li:nth-child(1) b {
+    width: 12px;
+    height: 6px;
+    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background-position: -226px 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.h-top ul li:nth-child(6) b {
+    width: 26px;
+    height: 13px;
+    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background-position: -192px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -100%);
+}
+
+header .h-top .t-right {
+    height: 70px;
+    display: inline-flex;
+    width: 350px;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+}
+
+header .h-top .t-right a {
+    cursor: pointer;
+}
+
+header .h-top form {
+    position: relative;
+}
+
+.h-top .t-right input {
+    width: 158px;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+    text-indent: 30px;
+    font-size: 12px;
+}
+
+.h-top .t-right .input-img {
+    width: 13px;
+    height: 14px;
+    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background-position: -10px -108px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.h-top .t-right .first {
+    line-height: 30px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    color: #ccc;
+    font-size: 12px;
+    background-color: #242424;
+    border: 1px solid #666;
+    border-radius: 20px;
+}
+
+.h-top .t-right .first:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.h-top .t-right .last {
+    color: #999;
+    font-size: 12px;
+    line-height: 30px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.h-top .t-right .last>span:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.h-top .t-right .last>span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.h-top .t-right .last img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.h-top .t-right .last ul {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(-50px, 40px);
+    border-radius: 5px;
+    background-color: #242424;
+    z-index: 100;
+    box-shadow: 0 0 5px black;
+}
+
+.h-top .t-right .last ul li {
+    width: 160px;
+    height: 30px;
+    color: white;
+}
+
+.h-top .t-right .last ul li:hover {
+    background-color: #333;
+}
+
+.h-top .t-right .last ul li span {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.h-top .t-right .last ul li i {
+    width: 18px;
+    height: 18px;
+    background: url(http://s2.music.126.net/style/web2/img/frame/toplist.png?0045eb2fa812f4bdc768e2a055bb9ce0);
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.t-right .last ul li:nth-child(1) i {
+    background-position: 0 -80px
+}
+
+.t-right .last ul li:nth-child(2) i {
+    background-position: -20px -120px
+}
+
+.t-right .last ul li:nth-child(3) i {
+    background-position: 0 -100px
+}
+
+.t-right .last ul li:nth-child(4) i {
+    background-position: 0 -221px
+}
+
+.t-right .last ul li:nth-child(5) i {
+    background-position: 0 -140px
+}
+
+.t-right .last ul li:nth-child(6) i {
+    background-position: -20px -142px
+}
+
+.t-right .last ul li:nth-child(7) i {
+    background-position: 0 -200px
+}
+
+.t-right .last ul li:nth-child(4), .t-right .last ul li:nth-child(6) {
+    border-bottom: 1px solid black;
+}
+
+/* 这里是头部下方nav */
+
+header .h-bot {
+    width: 100%;
+    height: 35px;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+}
+
+.h-bot .bot-main {
+    width: 1100px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.h-bot .bot-main ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 508px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-size: 12px;
+    margin: 0 0 0 176px;
+}
+
+.h-bot .bot-main ul li {
+    flex: 1;
+}
+
+.h-bot .bot-main ul li:first-child a {
+    padding: 2px 15px;
+    background-color: #9B0909;
+    border-radius: 20px;
+}
+
+header .h-bot .bot-main ul li:nth-child(3) a {
+    position: relative;
+}
+
+header .h-bot .bot-main ul li a:hover {
+    padding: 2px 15px;
+    background-color: #9B0909;
+    border-radius: 20px;
+}
+
+.cover {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.login {
+    width: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 3px 20px black;
+    background-color: #fff;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 200;
+}
+
+.login a {
+    cursor: pointer;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.login .top {
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    cursor: move;
+}
+
+.con {
+    width: 490px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.con span:nth-child(1) {
+    float: left;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.con a {
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.con a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.contain {
+    width: 530px;
+    margin-top: 20px;
+}
+
+.contain .left {
+    width: 300px;
+    height: 250px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 1px solid #ccc;
+}
+
+.contain .left span {
+    width: 224px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.log {
+    border-radius: 5px;
+    color: white;
+    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background-position: 0 -387px;
+}
+
+.log:hover {
+    background-position: 0 -469px;
+}
+
+.contain .left span:nth-of-type(2) {
+    border-radius: 3px;
+    color: black;
+    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background-position: 0 -59px;
+    position: relative;
+}
+
+.contain .left span:nth-of-type(2):hover {
+    background-position: 0 -141px;
+}
+
+.contain .left span:nth-of-type(2)::after {
+    content: '';
+    width: 5px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background-position: -245px -100px;
+}
+
+.contain .left .l-con {
+    width: 203px;
+    height: 107px;
+    background: url(http://s2.music.126.net/style/web2/img/platform.png?ee5dfa2518317ad1062f0ba547a60303) no-repeat;
+}
+
+.contain  label {
+    display: flex;
+    font-size: 8px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contain  label a {
+    color: #507DAF;
+}
+
+.contain  label a:hover {
+    text-decoration: underline;
+}
+
+.contain .right {
+    width: 230px;
+    height: 250px;
+    float: right;
+}
+
+.contain .right ul {
+    width: 180px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contain .right ul li {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contain .right ul li:hover a {
+    text-decoration: underline;
+}
+
+.contain .right ul li b {
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    background: url(http://s2.music.126.net/style/web2/img/logo.png?3ceee11ec878096ad528ee2f9bac45b1);
+}
+
+.contain .right ul li a {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.contain .right ul li:nth-child(1) b {
+    background-position: -150px -670px;
+}
+
+.contain .right ul li:nth-child(2) b {
+    background-position: -190px -670px;
+}
+
+.contain .right ul li:nth-child(3) b {
+    background-position: -231px -670px;
+}
+
+.contain .right ul li:nth-child(4) b {
+    background-position: -271px -670px;
+}
+
+/* 点击登录后的样式 */
+.log-show {
+    width: 530px;
+    display: none;
+    margin-top: 30px;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.log-top {
+    width: 100%;
+    height: 180px;
+    margin: 20px auto 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.log-show .tel {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.log-show ul {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.log-show input {
+    border: 1px solid #ccc;
+    text-indent: 10px;
+    height: 30px;
+}
+
+.log-show .tel input {
+    width: 180px;
+    border-left: none;
+}
+
+.log-top .pwd {
+    width: 220px;
+}
+
+.log-top p {
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.log-top p input {
+    height: 20px;
+    margin: 5px 10px 0 0;
+    float: left;
+}
+
+.log-top p span {
+    float: left;
+}
+
+.log-top p a {
+    float: right;
+}
+
+.log-top .log {
+    width: 220px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+.log-bot {
+    height: 40px;
+    line-height: 40px;
+}
+
+.l-back {
+    float: left;
+    margin-left: 20px;
+    color: #0c72c3;
+}
+
+.r-back {
+    float: right;
+    margin-right: 20px;
+    color: #999;
+}
+
+.xieyi {
+    background-color: black;
+    color: #fff;
+    opacity: .5;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 播放器代码 */
+.player {
+    width: 100%;
+    height: 47px;
+    background: url(../../img/playbar.png) repeat-x;
+    background-position: 0 -7px;
+    position: fixed;
+    bottom: -1px;
+    margin: 0 0 -45px;
+    box-shadow: 0 -2px 3px black;
+    z-index: 10;
+}
+
+.player .hand {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -15px;
+    cursor: pointer;
+}
+
+.lock {
+    position: absolute;
+    right: 0;
+    width: 67px;
+    height: 14px;
+    background: url(../../img/playbar.png);
+    background-position: 0 -386px;
+    top: -14px;
+}
+
+.lock span {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/playbar.png);
+    background-position: -82px -383px;
+    transform: translateX(50%);
+    top: 1px;
+    right: 40px;
+}
+
+.lock span:hover {
+    background-position: -82px -403px;
+    cursor: pointer;
+}
+
+.p-contain {
+    width: 980px;
+    height: 47px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-contain .left {
+    width: 130px;
+    height: 47px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+.p-contain .left .pre {
+    width: 24px;
+    height: 25px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -131px;
+}
+
+.p-contain .left .next {
+    width: 24px;
+    height: 25px;
+    background: url(../../img/playbar.png);
+    background-position: -82px -131px;
+}
+
+.p-contain .left .play {
+    width: 34px;
+    height: 33px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -205px;
+}
+
+.p-contain .left .play:hover {
+    background-position: -42px -205px;
+}
+
+.p-contain .left .pause {
+    width: 34px;
+    height: 33px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -166px;
+}
+
+.p-contain .left .pause:hover {
+    background-position: -42px -166px;
+}
+
+.p-contain .left .next:hover {
+    background-position: -112px -131px;
+}
+
+.p-contain .left .pre:hover {
+    background-position: -32px -131px;
+}
+
+.p-contain .c-bot {
+    width: 493px;
+    height: 9px;
+    background: url(../../img/statbar.png);
+    background-position: 0 0;
+    margin-left: 15px;
+    position: relative;
+}
+
+.p-contain .c-bot .c-bot-clone {
+    position: absolute;
+    background: url(../../img/statbar.png);
+    background-position: 0 -66px;
+    width: 0px;
+    height: 9px;
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+
+.p-contain .c-bot .c-bot-clone .cb {
+    width: 18px;
+    height: 18px;
+    background: url(../../img/iconall.png);
+    background-position: -2px -253px;
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    z-index: 15;
+}
+
+.cb:hover {
+    background-position: -2px -283px;
+}
+
+.p-contain .c-bot span {
+    width: 90px;
+    height: 12px;
+    position: absolute;
+    right: -100px;
+    font-size: 12px;
+    color: #ccc;
+    bottom: 4px;
+}
+
+.p-contain .cg {
+    width: 34px;
+    height: 34px;
+}
+
+.p-contain .center {
+    width: 608px;
+    height: 47px;
+    font-size: 12px;
+    position: relative;
+}
+
+.p-contain .center .c-top {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.c-top .song {
+    color: #fff;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.c-top span {
+    color: #ccc;
+    max-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.c-top .link {
+    width: 14px;
+    height: 15px;
+    background: url(../../img/playbar.png);
+    background-position: -110px -103px;
+}
+
+.c-top span:hover,
+.song:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.c-top .link:hover {
+    background-position: -130px -103px;
+}
+
+.p-contain .right {
+    width: 196px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p-contain .right span {
+    width: 1px;
+    height: 20px;
+}
+
+.p-contain .right .follow {
+    width: 18px;
+    height: 19px;
+    background: url(../../img/playbar.png);
+    background-position: -92px -166px;
+}
+
+.p-contain .right .follow:hover {
+    background-position: -92px -192px;
+}
+
+.p-contain .right .share {
+    width: 17px;
+    height: 17px;
+    background: url(../../img/playbar.png);
+    background-position: -118px -166px;
+}
+
+.p-contain .right .share:hover {
+    background-position: -118px -192px;
+}
+
+.p-contain .laba {
+    width: 25px;
+    height: 24px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -248px;
+}
+
+.p-contain .laba:hover {
+    background-position: -31px -248px;
+    cursor: pointer;
+}
+
+.p-contain .xunhuan {
+    width: 19px;
+    height: 18px;
+    background: url(../../img/playbar.png);
+    background-position: -6px -347px;
+    float: left;
+}
+
+.p-contain .xunhuan:hover {
+    background-position: -36px -347px;
+    cursor: pointer;
+}
+
+.p-contain .gedan {
+    width: 55px;
+    height: 23px;
+    background: url(../../img/playbar.png);
+    background-position: -45px -71px;
+}
+
+.p-contain .gedan:hover {
+    background-position: -45px -101px;
+    cursor: pointer;
+}

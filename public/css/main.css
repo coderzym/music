@@ -1,0 +1,961 @@
+/* 轮播图代码 */
+.banner {
+    width: 100%;
+    height: 285px;
+}
+
+.container {
+    width: 982px;
+    height: 285px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-container {
+    width: 728px;
+    height: 285px;
+    margin: 0;
+    float: left;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: red;
+}
+
+.container .b-right {
+    width: 254px;
+    height: 285px;
+    float: right;
+    background: url(../img/download.png);
+    position: relative;
+}
+
+.container .b-right a {
+    display: block;
+    width: 215px;
+    height: 56px;
+    position: absolute;
+    right: 19.5px;
+    bottom: 44px;
+    cursor: pointer;
+}
+
+.container .b-right a:hover {
+    background: no-repeat url(../img/download.png);
+    background-position: 0 -289px;
+}
+
+.container .b-right p {
+    color: #8d8d8d;
+    font-size: 12px;
+    width: 254px;
+    height: 16px;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+}
+
+.swiper-button-prev {
+    left: -68px;
+    top: 50%;
+    width: 37px;
+    height: 63px;
+}
+
+.swiper-button-prev:hover {
+    background-color: #ccc;
+    opacity: .2;
+}
+
+.swiper-button-next {
+    width: 37px;
+    height: 63px;
+    right: -68px;
+    top: 50%;
+}
+
+.swiper-button-next:hover {
+    background-color: #ccc;
+    opacity: .2;
+}
+
+/* 这里是main内容样式代码 */
+main {
+    width: 982px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+main .l-main {
+    width: 729px;
+    height: 1350px;
+    float: left;
+    position: relative;
+    border-right: 2px solid #f2f2f2;
+}
+
+main .l-main .article {
+    width: 689px;
+    height: 1345px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.l-main .article .l-hot {
+    height: 523px;
+}
+
+.l-main .article .l-hot:hover {
+    cursor: pointer;
+}
+
+main .l-main .article .top {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 2px solid #C10D0C;
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
+}
+
+.top>b {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: url(../img/index.png);
+    background-position: -235px -164px;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l-hot a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.l-hot a:hover {
+    text-decoration: underline;
+}
+
+.l-main .article .ti {
+    margin-left: 42px;
+    float: left;
+    text-decoration: none;
+}
+
+.l-main .article .ti:hover {
+    cursor: pointer;
+}
+
+.article .l-hot .list {
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    width: 250px;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+    margin-left: 28px;
+}
+
+.article .more {
+    float: right;
+    font-size: 12px;
+    color: #666;
+    height: 38px;
+    margin-right: 20px;
+}
+
+.article .more:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.article .top i {
+    background: url(../img/index.png);
+    background-position: 0 -240px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.article .l-hot ul {
+    margin-top: 25px;
+    width: 689px;
+    height: 468px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.article .l-hot ul li {
+    width: 140px;
+    white-space: wrap;
+}
+
+.article .l-hot ul li b {
+    display: block;
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.msk {
+    background: url(../img/coverall.png);
+    background-position: 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 140px;
+}
+
+.l-hot ul li b e {
+    width: 140px;
+    height: 27px;
+    color: #ccc;
+    position: absolute;
+    bottom: 0;
+    background: url(../img/coverall.png);
+    background-position: 0 -537px;
+    z-index: 2;
+
+}
+
+.l-hot ul li b e span {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+
+.l-hot ul li b e span:nth-child(1) {
+    background: url(../img/iconall.png);
+    background-position: 0 -24px;
+    width: 14px;
+    height: 11px;
+    left: 10px;
+}
+
+.l-hot ul li b e span:nth-child(2) {
+    font-size: 12px;
+    left: 30px;
+    font-weight: initial;
+}
+
+.l-hot ul li b e span:nth-child(3) {
+    background: url(../img/iconall.png);
+    background-position: 0 0;
+    width: 16px;
+    height: 17px;
+    right: 10px;
+}
+
+.l-hot ul li b e span:nth-child(3):hover {
+    background: url(../img/iconall.png);
+    background-position: 0 -60px;
+    cursor: pointer;
+}
+
+.l-main .article .l-new {
+    height: 243px;
+}
+
+.article .l-new .l-new-bot {
+    width: 689px;
+    height: 188px;
+    margin-top: 20px;
+    border: 1px solid #d3d3d3;
+    background-color: #f5f5f5;
+}
+
+.l-new .l-new-bot ul {
+    width: 645px;
+    height: 188px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.l-new .l-new-bot ul li {
+    width: 116px;
+    height: 140px;
+    position: relative;
+
+}
+
+.albumPic {
+    width: 116px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background: url(../img/coverall.png);
+    background-position: 0 -570px;
+}
+
+.album {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.l-new .l-new-bot ul li i {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    display: none;
+    background: url(../img/iconall.png);
+    background-position: 0 -86px;
+    right: 0;
+    bottom: 0;
+}
+
+.l-new .l-new-bot ul li i:hover {
+    background: url(../img/iconall.png);
+    background-position: 0 -111px;
+}
+
+main .l-main .article .l-new .l-new-bot ul li b:hover i {
+    display: block;
+}
+
+.l-new-bot ul li b {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: url(../img/coverall.png);
+    top: 0;
+    left: 0;
+    background-position: -240px -70px;
+    cursor: pointer;
+}
+
+.l-new-bot ul li p {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 17px;
+}
+
+.l-new-bot ul li p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.l-new-bot ul li p:last-child {
+    color: #666;
+}
+
+.l-new-bot .new-l {
+    background: url(../img/index.png);
+    background-position: -265px -77px;
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l-new .l-new-bot .new-l:hover {
+    background-position: -285px -77px;
+}
+
+.l-new .l-new-bot .new-r {
+    background: url(../img/index.png);
+    background-position: -306px -77px;
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l-new-bot .new-r:hover {
+    background-position: -326px -77px;
+}
+
+main .l-main .article .l-bored {
+    margin-top: 40px;
+    width: 689px;
+    height: 550px;
+}
+
+main .l-main .article .l-bored .m-bored {
+    background-color: #f5f5f5;
+    width: 689px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+dl {
+    width: 229px;
+}
+
+.m-bored dt {
+    width: 229px;
+    height: 100px;
+    position: relative;
+}
+
+dd {
+    width: 228px;
+}
+
+dt .con {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.m-bored dl dt .st {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.m-bored dl:nth-child(1) dt .st {
+    background: url(../img/biaosheng.jpg);
+    background-size: 80px;
+}
+
+.m-bored dl:nth-child(2) dt .st {
+    background: url(../img/xinge.jpg);
+    background-size: 80px;
+}
+
+.m-bored dl:nth-child(3) dt .st {
+    background: url(../img/yuanchuang.jpg);
+    background-size: 80px;
+}
+
+.m-bored dt .zi {
+    width: 100px;
+    height: 51px;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.m-bored dt a .mask {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url(../img/coverall.png);
+    background-position: -145px -57px;
+    left: 0;
+    top: 0;
+}
+
+.m-bored dt .zi span {
+    display: block;
+    position: relative;
+    width: 55px;
+    height: 22px;
+    margin-top: 10px;
+}
+
+dt .zi span a {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: url(../img/index.png);
+}
+
+dt .zi span a:first-child {
+    background-position: -267px -205px;
+    float: left;
+}
+
+dt .zi span a:first-child:hover {
+    background-position: -267px -235px;
+}
+
+dt .zi span a:last-child {
+    background-position: -300px -205px;
+    float: right;
+}
+
+dt .zi span a:last-child:hover {
+    background-position: -300px -235px;
+}
+
+.m-bored dl:nth-child(1),
+dl:nth-child(2) {
+    border-right: 1px solid #999;
+}
+
+.m-bored dd ol li {
+    width: 228px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    color: #000;
+    position: relative;
+}
+
+ol {
+    list-style: none;
+}
+
+ol li .song {
+    width: 110px;
+    height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ol li i {
+    display: none;
+    width: 60px;
+    height: 32px;
+    float: right;
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+ol li:hover i {
+    display: inline-block;
+}
+
+ol li i a {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+ol li i a:nth-child(1) {
+    width: 17px;
+    height: 17px;
+    background: url(../img/index.png);
+    background-position: -267px -268px;
+    left: 0;
+}
+
+ol li i a:nth-child(2) {
+    width: 13px;
+    height: 13px;
+    background: url(../img/icon.png);
+    background-position: 0 -700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ol li i a:nth-child(3) {
+    width: 16px;
+    height: 14px;
+    background: url(../img/index.png);
+    background-position: -297px -270px;
+    right: 0;
+}
+
+ol li i a:nth-child(1):hover {
+    background-position: -267px -288px;
+}
+
+ol li i a:nth-child(2):hover {
+    background-position: -22px -700px;
+}
+
+ol li i a:nth-child(3):hover {
+    background-position: -297px -290px;
+}
+
+.l-bored h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ol li span {
+    width: 35px;
+    height: 32px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+}
+
+ol li a {
+    font-size: 12px;
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ol li a:hover {
+    text-decoration: underline;
+}
+
+ol li:nth-child(2n+1) {
+    background-color: rgb(230, 228, 228);
+}
+
+ol li:nth-child(-n+3) span {
+    color: #c10d0c;
+}
+
+ol li:last-child a {
+    float: right;
+    text-align: center;
+}
+
+main .r-main {
+    width: 251px;
+    height: 920px;
+    float: right;
+}
+
+.r-main .logIn {
+    width: 250px;
+    height: 185px;
+    background: url(../img/index.png);
+    background-position: 0 -270px;
+    margin-top: 20px;
+    display: none;
+}
+
+.log-info {
+    width: 250px;
+    height: 90px;
+}
+
+.log-info img {
+    float: left;
+    width: 86px;
+    height: 86px;
+    border: 1px solid #dadada;
+    margin-left: 20px;
+}
+
+.log-info .userInfo {
+    width: 115px;
+    height: 86px;
+    float: left;
+    margin-left: 20px;
+}
+
+.userInfo a {
+    display: block;
+    width: 40px;
+    height: 17px;
+    background: url(http://s2.music.126.net/style/web2/img/icon2.png?14ea912c3543e7544c129ba42da81f2e);
+    background-position: -130px -64px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.userInfo a b {
+    font-size: 12px;
+    float: right;
+    color: #8d8d8d;
+}
+
+.userInfo a b::after {
+    content: '';
+    height: 17px;
+    width: 8px;
+    position: absolute;
+    background: url(http://s2.music.126.net/style/web2/img/icon2.png?14ea912c3543e7544c129ba42da81f2e);
+    background-position: -192px -64px;
+}
+
+.userInfo>div {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background: url(../img/button2.png);
+    background-position: 0 -387px;
+    cursor: pointer;
+    margin-top: 8px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.logIn>ul {
+    width: 230px;
+    height: 45px;
+    margin: 30px 0 0 20px;
+}
+
+.logIn>ul li {
+    width: 45px;
+    height: 45px;
+    float: left;
+    color: #666666;
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+}
+
+.logIn>ul li:nth-child(2), .logIn>ul li:nth-child(3) {
+    margin-left: 20px;
+}
+
+.logIn>ul li:nth-child(3) {
+    border: 0;
+}
+
+.logIn>ul li:hover {
+    color: #007aff;
+}
+
+.logIn>ul li>p {
+    font-size: 18px;
+}
+
+.logIn>ul li>span {
+    font-size: 12px;
+}
+
+.userInfo>div:hover {
+    background-position: 0 -469px;
+}
+
+.log-info .userInfo p {
+    width: 115px;
+    font-size: 14px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.log-info .userInfo p:hover {
+    text-decoration: underline;
+}
+
+main .r-main .r-list-top {
+    width: 250px;
+    height: 126px;
+    background: url(../img/index.png);
+    background-position: 0 0;
+    position: relative;
+}
+
+main .r-main .r-list-top p {
+    font-size: 12px;
+    color: #666;
+    width: 205px;
+    height: 75px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+main .r-main .r-list-top a {
+    background: url(../img/index.png);
+    background-position: 0 -195px;
+    color: #fff;
+    font-size: 12px;
+    width: 100px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+main .r-main .r-list-top a:hover {
+    background-position: -110px -195px;
+}
+
+main .r-main .r-list-b {
+    width: 250px;
+    height: 455px;
+    margin-top: 20px;
+}
+
+main .r-main .r-list-b .til {
+    border-bottom: 1px solid #8d8d8d;
+    font-size: 12px;
+    width: 210px;
+    height: 23px;
+    margin: 30px auto 0;
+}
+
+main .r-main .r-list-b .til span {
+    display: inline-block;
+}
+
+main .r-main .r-list-b .til span:nth-child(1) {
+    float: left;
+}
+
+main .r-main .r-list-b .til span:nth-child(2) {
+    float: right;
+    color: #666;
+}
+
+.r-list-b .til span:nth-child(2):hover {
+    text-decoration: underline;
+}
+
+.r-list-b .singer-list {
+    width: 210px;
+    height: 410px;
+    margin: 20px auto 0;
+}
+
+.r-list-b .singer-list li {
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    width: 210px;
+    height: 63px;
+    margin-bottom: 20px;
+}
+
+.r-list-b .singer-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.r-list-b .singer-list li img {
+    float: left;
+    width: 61px;
+    height: 61px;
+}
+
+.r-list-b .singer-list li .tex {
+    padding-left: 20px;
+    height: 62px;
+    float: left;
+}
+
+.r-list-b .singer-list li .tex p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.r-list-b .singer-list li .tex p:nth-child(1) {
+    width: 100px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.r-list-b .singer-list li .tex p:nth-child(2) {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 8px;
+    width: 100px;
+}
+
+.r-list-b .in {
+    display: block;
+    width: 210px;
+    height: 28px;
+    margin: 0 auto;
+    background: url(../img/button2.png);
+    background-position: -1px -60px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #ccc;
+}
+
+.r-list-b .in:hover {
+    background-position: -1px -142px;
+}
+
+
+
+main .r-main .r-list-b .author-list {
+    width: 210px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.r-list-b .author-list li {
+    width: 210px;
+    height: 50px;
+}
+
+.r-list-b .author-list .text1 {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    float: right;
+}
+
+.r-list-b .author-list .text1 p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.r-list-b .author-list .text1 p:first-child i {
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 0;
+    width: 11px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.author-list .text1 p:last-child {
+    color: #666;
+    margin-top: 5px;
+}
+
+.author-list li img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.author-list li img:hover,
+.text1 p a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

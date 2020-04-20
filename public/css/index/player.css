@@ -1,0 +1,283 @@
+.player {
+    width: 100%;
+    height: 47px;
+    background: url(../../img/playbar.png) repeat-x;
+    background-position: 0 -7px;
+    position: fixed;
+    bottom: -1px;
+    margin: 0 0 -45px;
+    box-shadow: 0 -2px 3px black;
+    z-index: 10;
+}
+
+.player .hand {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -15px;
+    cursor: pointer;
+}
+
+.lock {
+    position: absolute;
+    right: 0;
+    width: 67px;
+    height: 14px;
+    background: url(../../img/playbar.png);
+    background-position: 0 -386px;
+    top: -14px;
+}
+
+.lock span {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/playbar.png);
+    background-position: -82px -383px;
+    transform: translateX(50%);
+    top: 1px;
+    right: 40px;
+}
+
+.lock span:hover {
+    background-position: -82px -403px;
+    cursor: pointer;
+}
+
+.p-contain {
+    width: 980px;
+    height: 47px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-contain .left {
+    width: 130px;
+    height: 47px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+.p-contain .left .pre {
+    width: 24px;
+    height: 25px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -131px;
+}
+
+.p-contain .left .next {
+    width: 24px;
+    height: 25px;
+    background: url(../../img/playbar.png);
+    background-position: -82px -131px;
+}
+
+.p-contain .left .play {
+    width: 34px;
+    height: 33px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -205px;
+}
+
+.p-contain .left .play:hover {
+    background-position: -42px -205px;
+}
+
+.p-contain .left .pause {
+    width: 34px;
+    height: 33px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -166px;
+}
+
+.p-contain .left .pause:hover {
+    background-position: -42px -166px;
+}
+
+.p-contain .left .next:hover {
+    background-position: -112px -131px;
+}
+
+.p-contain .left .pre:hover {
+    background-position: -32px -131px;
+}
+
+.p-contain .c-bot {
+    width: 493px;
+    height: 9px;
+    background: url(../../img/statbar.png);
+    background-position: 0 0;
+    margin-left: 15px;
+    position: relative;
+}
+
+.p-contain .c-bot .c-bot-clone {
+    position: absolute;
+    background: url(../../img/statbar.png);
+    background-position: 0 -66px;
+    width: 0px;
+    height: 9px;
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+
+.p-contain .c-bot .c-bot-clone .cb {
+    width: 18px;
+    height: 18px;
+    background: url(../../img/iconall.png);
+    background-position: -2px -253px;
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    z-index: 15;
+}
+
+.cb:hover {
+    background-position: -2px -283px;
+}
+
+.p-contain .c-bot span {
+    width: 90px;
+    height: 12px;
+    position: absolute;
+    right: -100px;
+    font-size: 12px;
+    color: #ccc;
+    bottom: 4px;
+}
+
+.p-contain .cg {
+    width: 34px;
+    height: 34px;
+}
+
+.p-contain .center {
+    width: 608px;
+    height: 47px;
+    font-size: 12px;
+    position: relative;
+}
+
+.p-contain .center .c-top {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.c-top .song {
+    color: #fff;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.c-top span {
+    color: #ccc;
+    max-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.c-top .link {
+    width: 14px;
+    height: 15px;
+    background: url(../../img/playbar.png);
+    background-position: -110px -103px;
+}
+
+.c-top span:hover,
+.song:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.c-top .link:hover {
+    background-position: -130px -103px;
+}
+
+.p-contain .right {
+    width: 196px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p-contain .right span {
+    width: 1px;
+    height: 20px;
+}
+
+.p-contain .right .follow {
+    width: 18px;
+    height: 19px;
+    background: url(../../img/playbar.png);
+    background-position: -92px -166px;
+}
+
+.p-contain .right .follow:hover {
+    background-position: -92px -192px;
+}
+
+.p-contain .right .share {
+    width: 17px;
+    height: 17px;
+    background: url(../../img/playbar.png);
+    background-position: -118px -166px;
+}
+
+.p-contain .right .share:hover {
+    background-position: -118px -192px;
+}
+
+.p-contain .laba {
+    width: 25px;
+    height: 24px;
+    background: url(../../img/playbar.png);
+    background-position: -2px -248px;
+}
+
+.p-contain .laba:hover {
+    background-position: -31px -248px;
+    cursor: pointer;
+}
+
+.p-contain .xunhuan {
+    width: 19px;
+    height: 18px;
+    background: url(../../img/playbar.png);
+    background-position: -6px -347px;
+    float: left;
+}
+
+.p-contain .xunhuan:hover {
+    background-position: -36px -347px;
+    cursor: pointer;
+}
+
+.p-contain .gedan {
+    width: 55px;
+    height: 23px;
+    background: url(../../img/playbar.png);
+    background-position: -45px -71px;
+}
+
+.p-contain .gedan:hover {
+    background-position: -45px -101px;
+    cursor: pointer;
+}
