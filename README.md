@@ -1,4 +1,4 @@
-# music
+# music（3.17~3.24）
 
 需要搭配使用：https://github.com/Binaryify/NeteaseCloudMusicApi
 
