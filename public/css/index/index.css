@@ -154,7 +154,7 @@ header .h-top {
 }
 
 header .h-top .logo {
-    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f);
+    background: url(../../img/topbar.png);
     width: 176px;
     height: 69px;
     float: left;
@@ -193,7 +193,7 @@ header .h-top .logo {
 .h-top>ul li:nth-child(1) b {
     width: 12px;
     height: 6px;
-    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background: url(../../img/topbar.png) no-repeat;
     background-position: -226px 0;
     position: absolute;
     left: 50%;
@@ -204,7 +204,7 @@ header .h-top .logo {
 .h-top ul li:nth-child(6) b {
     width: 26px;
     height: 13px;
-    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background: url(../../img/topbar.png) no-repeat;
     background-position: -192px 0;
     position: absolute;
     top: 50%;
@@ -240,7 +240,7 @@ header .h-top form {
 .h-top .t-right .input-img {
     width: 13px;
     height: 14px;
-    background: url(http://s2.music.126.net/style/web2/img/frame/topbar.png?09308da7f672820dc088671996ace62f) no-repeat;
+    background: url(../../img/topbar.png) no-repeat;
     background-position: -10px -108px;
     position: absolute;
     left: 10px;
@@ -331,7 +331,7 @@ header .h-top form {
 .h-top .t-right .last ul li i {
     width: 18px;
     height: 18px;
-    background: url(http://s2.music.126.net/style/web2/img/frame/toplist.png?0045eb2fa812f4bdc768e2a055bb9ce0);
+    background: url(../../img/toplist.png);
     margin-right: 8px;
     display: inline-block;
 }
@@ -506,7 +506,7 @@ header .h-bot .bot-main ul li a:hover {
 .log {
     border-radius: 5px;
     color: white;
-    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background: url(../../img/button2.png);
     background-position: 0 -387px;
 }
 
@@ -517,7 +517,7 @@ header .h-bot .bot-main ul li a:hover {
 .contain .left span:nth-of-type(2) {
     border-radius: 3px;
     color: black;
-    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background: url(../../img/button2.png);
     background-position: 0 -59px;
     position: relative;
 }
@@ -532,14 +532,14 @@ header .h-bot .bot-main ul li a:hover {
     height: 30px;
     position: absolute;
     right: 0;
-    background: url(http://s2.music.126.net/style/web2/img/button2.png?460c79d02abcf8b17bd327ab3b5125bf);
+    background: url(../../img/button2.png);
     background-position: -245px -100px;
 }
 
 .contain .left .l-con {
     width: 203px;
     height: 107px;
-    background: url(http://s2.music.126.net/style/web2/img/platform.png?ee5dfa2518317ad1062f0ba547a60303) no-repeat;
+    background: url(../../img/platform.png) no-repeat;
 }
 
 .contain  label {
@@ -588,7 +588,7 @@ header .h-bot .bot-main ul li a:hover {
     width: 38px;
     height: 38px;
     display: inline-block;
-    background: url(http://s2.music.126.net/style/web2/img/logo.png?3ceee11ec878096ad528ee2f9bac45b1);
+    background: url(../../img/logo.png);
 }
 
 .contain .right ul li a {

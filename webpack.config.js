@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
+    mode: 'production',
     entry: {
         index: './src/index.js'
     },
@@ -39,11 +40,29 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
             },
             {
                 test: /\.(png|jpg|gif|jpeg|webp|svg|eot|ttf|woff|woff2)$/,
-                use: ['url-loader'],
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10240,
+                            name: 'img/[name].[hash:7].[ext]'
+                        }
+                    }
+                ],
                 exclude: /node_modules/
             },
             {

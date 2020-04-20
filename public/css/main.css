@@ -679,7 +679,7 @@ main .r-main {
     display: block;
     width: 40px;
     height: 17px;
-    background: url(http://s2.music.126.net/style/web2/img/icon2.png?14ea912c3543e7544c129ba42da81f2e);
+    background: url(../img/icon2.png);
     background-position: -130px -64px;
     margin-top: 10px;
     position: relative;
@@ -696,7 +696,7 @@ main .r-main {
     height: 17px;
     width: 8px;
     position: absolute;
-    background: url(http://s2.music.126.net/style/web2/img/icon2.png?14ea912c3543e7544c129ba42da81f2e);
+    background: url(../img/icon2.png);
     background-position: -192px -64px;
 }
 
