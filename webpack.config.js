@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         index: './src/index.js'
     },
@@ -29,16 +29,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.sass$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-                exclude: /node_modules/
-            },
-            {
                 test: /\.css$/,
                 use: [
                     {
@@ -46,9 +36,14 @@ module.exports = {
                         options: {
                             publicPath: '../'
                         }
-                    },
+                    }, 'css-loader',
                     {
-                        loader: 'css-loader'
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                require('autoprefixer')
+                            ]
+                        }
                     }
                 ]
             },
