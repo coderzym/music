@@ -1,7 +1,7 @@
 #main {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 /* 这里是底部css代码 */
@@ -435,7 +435,7 @@ header .h-bot .bot-main ul li a:hover {
     max-height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     z-index: 200;
 }
 
@@ -638,7 +638,7 @@ header .h-bot .bot-main ul li a:hover {
 .log-show .tel {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .log-show ul {
@@ -899,7 +899,7 @@ a {
     height: 30px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .c-top .song {
