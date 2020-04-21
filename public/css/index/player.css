@@ -172,7 +172,7 @@ a {
     height: 30px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .c-top .song {
