@@ -9,10 +9,9 @@ import { album } from 'public/request/api.js';
 import { soar } from 'public/request/api.js';
 import { artistList } from 'public/request/api.js';
 import { popularDj } from 'public/request/api.js';
-import { updateMain } from 'public/js/login.js'
 
 export function main() {
-    const pics = $(".swiper-slide"),
+    let pics = $(".swiper-slide"),
         bns = $(".banner")[0],
         ps = $(".bf"),
         intros = $(".intros"),
@@ -139,7 +138,7 @@ export function main() {
             $(sImgs[i]).attr('src', res[i].img1v1Url)
         }
     }
- 
+
     // 6.最热主播榜
     new Promise(res => res(popularDj())).then(v => getPopularDj(v))
     async function getPopularDj(res) {
@@ -151,3 +150,5 @@ export function main() {
         }
     }
 }
+
+export let main2log = $('.r-list-top').children('a')

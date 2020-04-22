@@ -1,11 +1,11 @@
 import { update } from './global-login.js';
-import { main2login } from './global-login.js';
 import { warn } from "./global.js";
 import { drag } from "./global.js";
 import { test } from "./global.js";
 import { maskEvents } from "./global.js";
 import { isChecked } from "./global.js";
 import { prevent } from "./global.js";
+import { main2log } from "public/js/main.js";
 
 // 这里是登录模块，首先获取登录需要用到的DOM元素，部分地方可能会用原生JS，所以没给所有元素加[0]
 let log = $('.last')[0],
@@ -43,20 +43,18 @@ $(tRight).mouseleave(() => {
 
 let localIsLogin = JSON.parse(localStorage.getItem('isLogin'))
 
-// 两种登录方式
-main2login(loginFn)
-
 if (!localIsLogin) {
     $(log).click(loginFn)
+    $(main2log).click(loginFn)
 }
- 
+
 // 长按登录框头部拖动
 let logTop = $('.login', parent.document).children('.top')[0],
     loginBox = $('.login', parent.document)[0]
 drag(logTop, loginBox)
 
 // 用户点击登录后屏蔽键盘鼠标默认事件
-function loginFn() {
+export function loginFn() {
     loginFlag = !loginFlag
     if (loginFlag) {
         // 显示遮罩层

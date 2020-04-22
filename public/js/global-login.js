@@ -56,7 +56,7 @@ const utils = {
         $(logIn).css('display', 'none')
     }
 }
- 
+
 // 根据登录状态选择对应的展示方式
 export function update() {
     let isLogin = getLoginState(),
@@ -66,10 +66,4 @@ export function update() {
     } else {
         utils.updateLogout()
     }
-}
-
-// 点击主页面中的登录按钮弹出框
-export function main2login(fn) {
-    let main2log = $('.r-list-top').children('a')
-
 }
