@@ -19,7 +19,9 @@ let log = $('.last')[0],
 
 // 定义一个登录框显示隐藏的开关，定义是否更新用户信息的开关
 let loginFlag = false,
-    userFlag = true
+    userFlag = true,
+    // 定义全局存放用户信息的变量
+    userData
 
 let userImg = $('.last').find('img')[0],
     userInfo = $('.user-info'),
@@ -34,11 +36,10 @@ let userImg = $('.last').find('img')[0],
     tRight = $('.t-right')
 
 // 登录后的状态
-function showLogin(userData) {
-    let profile = userData.profile
+function showLogin() {
     $(userImg).attr({
-        'src': profile.avatarUrl,
-        'alt': profile.nickname
+        'src': userData.avatarUrl,
+        'alt': userData.nickname
     })
     $(userImg).css('display', 'block')
     $(menu).css('display', 'none')
@@ -53,11 +54,16 @@ function showLogin(userData) {
     })
     $(right2log).css('display', 'none')
     $(logIn).css('display', 'block')
-    $(logInImg).attr('src', profile.avatarUrl)
-    $(followeds).text(profile.followeds)
-    $(follows).text(profile.follows)
-    $(eventCount).text(profile.eventCount)
-    $(userInfoP).text(profile.nickname)
+    updateMain()
+}
+
+// 更新main中的登录信息
+function updateMain() {
+    $(logInImg).attr('src', userData.avatarUrl)
+    $(followeds).text(userData.followeds)
+    $(follows).text(userData.follows)
+    $(eventCount).text(userData.eventCount)
+    $(userInfoP).text(userData.nickname)
 }
 
 // 退出登录
@@ -194,6 +200,7 @@ $(log2).click(() => {
         }).then(value => {
             warn('登录成功！')
             $(log).off('click')
+            localStorage.setItem('isLogin', true)
             // 如果用户信息存在于session里面，则直接更新
             if (sessionStorage['userInfo']) {
                 update()
@@ -202,7 +209,6 @@ $(log2).click(() => {
                 saveInfo(value)
                 update()
             }
-            localStorage.setItem('isLogin', true)
             location.reload()
         }).catch(() => {
             warn('用户名或者密码有误，请确认后重新输入')
@@ -237,10 +243,10 @@ if (sessionStorage['userInfo']) {
 
 // 更新用户登录后页面的入口函数
 function update() {
-    let userData = JSON.parse(sessionStorage.getItem('userInfo'))
+    userData = JSON.parse(sessionStorage.getItem('userInfo')).profile
     // 界面显示用户基本信息
     if (userFlag) {
-        showLogin(userData)
+        showLogin()
     } else {
         hideLogin()
     }

@@ -28,8 +28,13 @@ class Router {
 function mainCallback() {
     import(/* webpackChunkName: "main" */ 'public/js/main').then(value => {
         $(main).load('public/main.html', () => {
-            require('public/js/login.js');
+            require('public/js/login.js')
+            let done = JSON.parse(localStorage.getItem('isLogin'))
             value.main()
+            if (done) {
+                location.reload()
+                localStorage.setItem('isLogin', false)
+            }
         })
     })
 }
@@ -37,7 +42,7 @@ function mainCallback() {
 function songCallback() {
     import(/* webpackChunkName: "song" */ 'public/js/song').then(value => {
         $(main).load('public/song.html', () => {
-            require('public/js/login.js');
+            require('public/js/login.js')
             value.song()
         })
     })
