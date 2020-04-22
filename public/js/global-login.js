@@ -1,6 +1,6 @@
 // 这里是登录模块的所有方法
 
-// 获取储存在sessionStorage里的当前的登录状态，
+// 获取储存在sessionStorage里的当前的登录状态
 function getLoginState() {
     let isLogin = JSON.parse(localStorage.getItem('isLogin'))
     return isLogin
@@ -66,4 +66,10 @@ export function update() {
     } else {
         utils.updateLogout()
     }
+}
+
+// 点击主页面中的登录按钮弹出框
+export function main2login(fn) {
+    let main2log = $('.r-list-top').children('a')
+    
 }

@@ -33,10 +33,6 @@ function requireModule() {
     isRequire = true
 }
 
-// 如果不是第一次进入路由，那么就不需要继续加载这个文件
-let first,
-    firstRes
-
 function mainCallback() {
     import(/* webpackChunkName: "main" */ 'public/js/main').then(value => {
         $(main).load('public/main.html', () => {

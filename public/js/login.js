@@ -1,7 +1,11 @@
 import { update } from './global-login.js';
+import { main2login } from './global-login.js';
 import { warn } from "./global.js";
 import { drag } from "./global.js";
 import { test } from "./global.js";
+import { maskEvents } from "./global.js";
+import { isChecked } from "./global.js";
+import { prevent } from "./global.js";
 
 // 这里是登录模块，首先获取登录需要用到的DOM元素，部分地方可能会用原生JS，所以没给所有元素加[0]
 let log = $('.last')[0],
@@ -16,7 +20,6 @@ let log = $('.last')[0],
     arg1 = $('.left').find('input'),
     value1 = $('.tel').children('input')[0],
     value2 = $('.pwd')[0],
-    main2log = $('.r-list-top').children('a'),
     out = $('.logout'),
     tRight = $('.t-right')
 
@@ -29,12 +32,23 @@ let userImg = $('.last').find('img')[0],
 $(userImg).mouseenter(() => {
     $(userInfo).css('display', 'flex')
 })
+
 $(userInfo).mouseleave(() => {
     $(userInfo).css('display', 'none')
 })
+
 $(tRight).mouseleave(() => {
     $(userInfo).css('display', 'none')
 })
+
+let localIsLogin = JSON.parse(localStorage.getItem('isLogin'))
+
+// 两种登录方式
+main2login(loginFn)
+
+if (!localIsLogin) {
+    $(log).click(loginFn)
+}
 
 // 长按登录框头部拖动
 let logTop = $('.login', parent.document).children('.top')[0],
@@ -48,61 +62,23 @@ function loginFn() {
         // 显示遮罩层
         $(cover).show()
         // 禁止滚轮滑动
-        cover.addEventListener('mousewheel', e => {
-            e.preventDefault()
-        })
+        maskEvents.bindEvents(cover, 'mousewheel', prevent)
         // 禁用键盘空格滚动事件
-        body.addEventListener('keydown', preventKeyboard, true)
+        maskEvents.bindEvents(body, 'keydown', prevent)
     } else {
         // 关闭遮罩层
         $(cover).hide()
         // 解除绑定事件
-        body.removeEventListener('keydown', preventKeyboard, true)
+        maskEvents.unbindEvents(body, 'keydown', prevent)
     }
-}
-
-// 点击首页main中登录框弹出登录
-if (main2log) {
-    $(main2log).click(loginFn)
 }
 
 if (!localStorage['isLogin']) {
     localStorage.setItem('isLogin', false)
 }
 
-let localIsLogin = JSON.parse(localStorage.getItem('isLogin'))
-
-if (!localIsLogin) {
-    $(log).on('click', loginFn)
-}
-
 // 点击关闭按钮登录框隐藏
 $(clo).click(loginFn)
-
-// 阻止键盘默认事件，取消绑定得另外申明一个函数
-function preventKeyboard() {
-    var e = window.event
-    // 禁用空格
-    if (e.keyCode == 32) {
-        e.preventDefault()
-    }
-}
-
-// 判断复选框是否选中
-function isChecked(el) {
-    var a1 = $(el).prop("checked")
-    return a1
-}
-
-// 绑定点击事件
-$(log1).click(() => {
-    let res = isChecked($(arg1))
-    if (res) {
-        change(logShow, contain, true)
-    } else {
-        warn('请仔细阅读下方协议后勾选')
-    }
-})
 
 // 根据用户选择切换不同的登录框
 function change(el1, el2, isLogin) {
@@ -114,6 +90,16 @@ function change(el1, el2, isLogin) {
         $(el1).hide()
     }
 }
+
+// 绑定登录的点击事件
+$(log1).click(() => {
+    let res = isChecked(arg1)
+    if (res) {
+        change(logShow, contain, true)
+    } else {
+        warn('请仔细阅读下方协议后勾选')
+    }
+})
 
 // 点击其他验证方式返回
 $(back).click(() => {

@@ -73,3 +73,27 @@ export const test = {
         return true
     }
 }
+
+// 4.绑定和解除绑定
+export const maskEvents = {
+    bindEvents(el, type, fn) {
+        el.addEventListener(type, fn)
+    },
+    unbindEvents(el, type, fn) {
+        el.removeEventListener(type, fn)
+    }
+}
+
+// 5.判断复选框是否选中
+export function isChecked(el) {
+    var a1 = $(el).prop("checked")
+    return a1
+}
+
+// 6.屏蔽默认事件
+export function prevent() {
+    let e = window.event
+    if (e.type === 'mousewheel' || (e.type === 'keydown' && e.keyCode === 32)) {
+        e.preventDefault()
+    }
+}
