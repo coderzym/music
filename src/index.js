@@ -25,16 +25,24 @@ class Router {
     }
 }
 
+let isRequire
+
+// 避免多次引入相同的模块
+function requireModule() {
+    require('public/js/login.js')
+    isRequire = true
+}
+
+// 判断是否为第一次进入路由
+let first = localStorage.getItem('firstLogin')
+
 function mainCallback() {
     import(/* webpackChunkName: "main" */ 'public/js/main').then(value => {
         $(main).load('public/main.html', () => {
-            require('public/js/login.js')
-            let done = JSON.parse(localStorage.getItem('isLogin'))
-            value.main()
-            if (done) {
-                location.reload()
-                localStorage.setItem('isLogin', false)
+            if (!isRequire) {
+                requireModule()
             }
+            value.main()
         })
     })
 }
@@ -42,7 +50,9 @@ function mainCallback() {
 function songCallback() {
     import(/* webpackChunkName: "song" */ 'public/js/song').then(value => {
         $(main).load('public/song.html', () => {
-            require('public/js/login.js')
+            if (!isRequire) {
+                requireModule()
+            }
             value.song()
         })
     })

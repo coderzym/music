@@ -35,7 +35,7 @@ let userImg = $('.last').find('img')[0],
     userInfoP = $('.userInfo').children('p'),
     tRight = $('.t-right')
 
-// 登录后的状态
+// 更新header登录状态
 function showLogin() {
     $(userImg).attr({
         'src': userData.avatarUrl,
@@ -57,7 +57,7 @@ function showLogin() {
     updateMain()
 }
 
-// 更新main中的登录信息
+// 更新main页面中的登录信息
 function updateMain() {
     $(logInImg).attr('src', userData.avatarUrl)
     $(followeds).text(userData.followeds)
@@ -199,8 +199,8 @@ $(log2).click(() => {
             resolve(logPhone(v1, v2))
         }).then(value => {
             warn('登录成功！')
-            $(log).off('click')
             localStorage.setItem('isLogin', true)
+            $(log).off('click')
             // 如果用户信息存在于session里面，则直接更新
             if (sessionStorage['userInfo']) {
                 update()
