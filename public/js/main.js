@@ -9,6 +9,7 @@ import { album } from 'public/request/api.js';
 import { soar } from 'public/request/api.js';
 import { artistList } from 'public/request/api.js';
 import { popularDj } from 'public/request/api.js';
+import { updateMain } from 'public/js/login.js'
 
 export function main() {
     const pics = $(".swiper-slide"),

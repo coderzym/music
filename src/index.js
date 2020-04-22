@@ -33,8 +33,9 @@ function requireModule() {
     isRequire = true
 }
 
-// 判断是否为第一次进入路由
-let first = localStorage.getItem('firstLogin')
+// 如果不是第一次进入路由，那么就不需要继续加载这个文件
+let first,
+    firstRes
 
 function mainCallback() {
     import(/* webpackChunkName: "main" */ 'public/js/main').then(value => {

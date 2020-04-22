@@ -1,109 +1,45 @@
+import { update } from './global-login.js';
+import { warn } from "./global.js";
+import { drag } from "./global.js";
+import { test } from "./global.js";
+
 // 这里是登录模块，首先获取登录需要用到的DOM元素，部分地方可能会用原生JS，所以没给所有元素加[0]
 let log = $('.last')[0],
     clo = $('.close')[0],
     log1 = $('.log')[0],
     log2 = $('.log-top').children('span'),
-    loginBox = $('.login', parent.document)[0],
     cover = $('.cover')[0],
     body = $('body')[0],
     logShow = $('.log-show')[0],
     contain = $('.contain'),
     back = $('.l-back'),
     arg1 = $('.left').find('input'),
-    xieyi = $('.xieyi')[0],
-    logTop = $('.login', parent.document).children('.top')[0],
     value1 = $('.tel').children('input')[0],
     value2 = $('.pwd')[0],
     main2log = $('.r-list-top').children('a'),
-    out = $('.logout')
-
-// 定义一个登录框显示隐藏的开关，定义是否更新用户信息的开关
-let loginFlag = false,
-    userFlag = true,
-    // 定义全局存放用户信息的变量
-    userData
-
-let userImg = $('.last').find('img')[0],
-    userInfo = $('.user-info'),
-    menu = $('.last').children('span'),
-    right2log = $('.r-list-top'),
-    logIn = $('.logIn'),
-    logInImg = $('.log-info').children('img'),
-    eventCount = $('.eventCount'),
-    follows = $('.follows'),
-    followeds = $('.followeds'),
-    userInfoP = $('.userInfo').children('p'),
+    out = $('.logout'),
     tRight = $('.t-right')
 
-// 更新header登录状态
-function showLogin() {
-    $(userImg).attr({
-        'src': userData.avatarUrl,
-        'alt': userData.nickname
-    })
-    $(userImg).css('display', 'block')
-    $(menu).css('display', 'none')
-    $(userImg).mouseenter(() => {
-        $(userInfo).css('display', 'flex')
-    })
-    $(userInfo).mouseleave(() => {
-        $(userInfo).css('display', 'none')
-    })
-    $(tRight).mouseleave(() => {
-        $(userInfo).css('display', 'none')
-    })
-    $(right2log).css('display', 'none')
-    $(logIn).css('display', 'block')
-    updateMain()
-}
+// 定义一个登录框显示隐藏的开关，定义是否更新用户信息的开关
+let loginFlag = false
 
-// 更新main页面中的登录信息
-function updateMain() {
-    $(logInImg).attr('src', userData.avatarUrl)
-    $(followeds).text(userData.followeds)
-    $(follows).text(userData.follows)
-    $(eventCount).text(userData.eventCount)
-    $(userInfoP).text(userData.nickname)
-}
+let userImg = $('.last').find('img')[0],
+    userInfo = $('.user-info')
 
-// 退出登录
-function hideLogin() {
-    $(userImg).attr({
-        'src': '',
-        'alt': ''
-    })
-    $(userImg).css('display', 'none')
-    $(menu).css('display', 'block')
-    $(right2log).css('display', 'block')
-    $(logIn).css('display', 'none')
-}
-
-// 警告框的弹出与消失
-function warn(value) {
-    $(xieyi).text(value)
-    $(xieyi).show()
-    setTimeout(() => {
-        $(xieyi).hide()
-        $(xieyi).text('')
-    }, 1500)
-}
+$(userImg).mouseenter(() => {
+    $(userInfo).css('display', 'flex')
+})
+$(userInfo).mouseleave(() => {
+    $(userInfo).css('display', 'none')
+})
+$(tRight).mouseleave(() => {
+    $(userInfo).css('display', 'none')
+})
 
 // 长按登录框头部拖动
-logTop.addEventListener('mousedown', e => {
-    // 获取鼠标在盒内的距离
-    var x = e.clientX - loginBox.offsetLeft,
-        y = e.clientY - loginBox.offsetTop
-    function move(e) {
-        loginBox.style.left = e.clientX - x + 'px'
-        loginBox.style.top = e.clientY - y + 'px'
-    }
-    // 移动时触发
-    document.addEventListener('mousemove', move)
-    // 弹起时解绑
-    document.addEventListener('mouseup', () => {
-        document.removeEventListener('mousemove', move)
-    })
-})
+let logTop = $('.login', parent.document).children('.top')[0],
+    loginBox = $('.login', parent.document)[0]
+drag(logTop, loginBox)
 
 // 用户点击登录后屏蔽键盘鼠标默认事件
 function loginFn() {
@@ -239,60 +175,4 @@ function saveInfo(res) {
 // 如果用户信息存在于session里面，则直接更新
 if (sessionStorage['userInfo']) {
     update()
-}
-
-// 更新用户登录后页面的入口函数
-function update() {
-    userData = JSON.parse(sessionStorage.getItem('userInfo')).profile
-    // 界面显示用户基本信息
-    if (userFlag) {
-        showLogin()
-    } else {
-        hideLogin()
-    }
-    userFlag = !userFlag
-}
-
-// 判断用户输入格式是否正确
-const test = {
-    // 验证输入手机号
-    checkPhone(v) {
-        // 匹配手机号的正则
-        const exp = /^[1][3,4,5,7,8,9][0-9]{9}$/
-        if (!v) {
-            warn('请输入手机号')
-            return false
-        }
-        if (!exp.test(v)) {
-            warn('您输入的手机号格式有误')
-            return false
-        }
-        return true
-    },
-    // 验证输入密码
-    checkPwd(v) {
-        const exp = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^[^\s\u4e00-\u9fa5]{6,16}$/
-        if (!v) {
-            warn('请输入密码')
-            return false
-        }
-        if (!exp.test(v)) {
-            warn('您输入的密码格式有误')
-            return false
-        }
-        return true
-    },
-    // 验证邮箱
-    checkEmail(v) {
-        const exp = /^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/
-        if (!v) {
-            warn('请输入邮箱')
-            return false
-        }
-        if (!exp.test(v)) {
-            warn('您输入的邮箱有误')
-            return false
-        }
-        return true
-    }
 }
