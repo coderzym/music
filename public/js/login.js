@@ -49,7 +49,7 @@ main2login(loginFn)
 if (!localIsLogin) {
     $(log).click(loginFn)
 }
-
+ 
 // 长按登录框头部拖动
 let logTop = $('.login', parent.document).children('.top')[0],
     loginBox = $('.login', parent.document)[0]

@@ -43,7 +43,7 @@ function mainCallback() {
         })
     })
 }
-
+ 
 function songCallback() {
     import(/* webpackChunkName: "song" */ 'public/js/song').then(value => {
         $(main).load('public/song.html', () => {

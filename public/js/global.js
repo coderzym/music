@@ -10,7 +10,7 @@ export function warn(value) {
         $(warning).text('')
     }, 1500)
 }
-
+ 
 // 2.拖拽模态框
 export function drag(child, parent) {
     child.addEventListener('mousedown', e => {

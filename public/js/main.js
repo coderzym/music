@@ -139,7 +139,7 @@ export function main() {
             $(sImgs[i]).attr('src', res[i].img1v1Url)
         }
     }
-
+ 
     // 6.最热主播榜
     new Promise(res => res(popularDj())).then(v => getPopularDj(v))
     async function getPopularDj(res) {
