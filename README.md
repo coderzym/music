@@ -1,3 +1,7 @@
+# 无意中发现了一个BUG
+
+首页的轮播图需要动态增加，不能写死，并不是每天的轮播图资源都是八张，所以得动态创建，然后动态添加，等有空了会修复下这个BUG，现在先记录一下
+
 # music
 
 需要搭配使用：https://github.com/Binaryify/NeteaseCloudMusicApi
