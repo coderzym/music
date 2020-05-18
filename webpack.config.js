@@ -64,20 +64,23 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ["@babel/preset-env"],
-                        plugins: [
-                            [
-                                "@babel/plugin-transform-runtime",
-                                {
-                                    "corejs": 3
-                                }
+                use: [
+                    'thread-loader',
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ["@babel/preset-env"],
+                            plugins: [
+                                [
+                                    "@babel/plugin-transform-runtime",
+                                    {
+                                        "corejs": 3
+                                    }
+                                ]
                             ]
-                        ]
+                        }
                     }
-                },
+                ],
                 exclude: /node_modules/
             },
             {
