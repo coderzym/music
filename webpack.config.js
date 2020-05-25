@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
     mode: 'development',
@@ -91,6 +92,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new BundleAnalyzerPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'public/index.html',
