@@ -6,6 +6,7 @@ require('public/css/common/base.css');
 
 const main = $('#main')
 console.log(11111);
+console.log(2222);
 
 class Router {
     constructor() {
