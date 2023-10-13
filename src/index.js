@@ -5,6 +5,7 @@ require('public/css/common/normalize.css');
 require('public/css/common/base.css');
 
 const main = $('#main')
+console.log(11111);
 
 class Router {
     constructor() {
